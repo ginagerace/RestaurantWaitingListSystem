@@ -1,0 +1,14 @@
+program4: p1.o p2.o p3.o
+	gcc -o program4 p1.o p2.o p3.o
+
+p1.o: p1.c program4.h
+	gcc -c p1.c
+
+p2.o: p2.c program4.h
+	gcc -c p2.c
+
+p3.o: p3.c program4.h
+	gcc -c p3.c
+
+clean:
+	rm p1.o p2.o p3.o program4
